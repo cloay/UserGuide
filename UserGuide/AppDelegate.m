@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "GuideView.h"
 #import "ViewController.h"
 
 @implementation AppDelegate
@@ -18,8 +18,21 @@
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
+    [self showGuideView];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)showGuideView{
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"HaveLaunched"]) {//是首次
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HaveLaunched"];
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+        GuideView *guideView = [[[UINib nibWithNibName:@"GuideView" bundle:nil] instantiateWithOwner:self options:nil] objectAtIndex:0];
+        [guideView setFrame:CGRectMake(0, 0, 320, 480)];
+        
+        [guideView setBackgroundColor:[UIColor clearColor]];
+        [self.window.rootViewController.view addSubview:guideView];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
