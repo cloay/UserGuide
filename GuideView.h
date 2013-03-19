@@ -1,6 +1,6 @@
 //
 //  GuideView.h
-//  lvYe
+//  
 //
 //  Created by Cloay on 12-9-18.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "UIImage+SplitImageIntoTwoParts.h"
+
+#define DEVICE_IS_IPHONE5 ([[UIScreen mainScreen] bounds].size.height == 568) 
 
 @interface GuideView : UIView<UIScrollViewDelegate>
 @property (retain, nonatomic) IBOutlet UIImageView *imageView;

@@ -44,7 +44,7 @@
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="IBUIImageView" id="411912649">
 								<reference key="NSNextResponder" ref="331063846"/>
-								<int key="NSvFlags">272</int>
+								<int key="NSvFlags">274</int>
 								<string key="NSFrame">{{1280, 0}, {320, 480}}</string>
 								<reference key="NSSuperview" ref="331063846"/>
 								<reference key="NSWindow"/>
@@ -59,7 +59,7 @@
 							</object>
 							<object class="IBUIButton" id="376659689">
 								<reference key="NSNextResponder" ref="331063846"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">256</int>
 								<string key="NSFrame">{{1404, 222}, {84, 53}}</string>
 								<reference key="NSSuperview" ref="331063846"/>
 								<reference key="NSWindow"/>
@@ -198,11 +198,12 @@
 					</object>
 					<object class="IBUIPageControl" id="902517711">
 						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">1292</int>
+						<int key="NSvFlags">1320</int>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{110, 427}, {100, 36}}</string>
+						<string key="NSFrame">{{110, 425}, {100, 36}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

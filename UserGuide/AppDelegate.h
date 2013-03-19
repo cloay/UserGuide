@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#define DEVICE_IS_IPHONE5 ([[UIScreen mainScreen] bounds].size.height == 568) 
 
 @class ViewController;
 

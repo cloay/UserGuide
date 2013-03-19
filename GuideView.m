@@ -1,6 +1,6 @@
 //
 //  GuideView.m
-//  lvYe
+//  
 //
 //  Created by Cloay on 12-9-18.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
@@ -34,7 +34,10 @@
     // Drawing code
     [self.pageScroll setContentSize:CGSizeMake(1600, 0)];
     [self.pageScroll setDelegate:self];
+    float y = DEVICE_IS_IPHONE5 ? 510 : 425;
+    [self.pageControl setFrame:CGRectMake(110, y, 100, 36)];
 }
+
 -(void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
 {   
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
@@ -49,9 +52,10 @@
     [self.startButton setHidden:YES];
     NSArray *array = [UIImage splitImageIntoTwoParts:self.imageView.image];
     self.left = [[UIImageView alloc] initWithImage:[array objectAtIndex:0]];
-    [self.left setFrame:CGRectMake(0, 0, 320, 480)];
+    float height = DEVICE_IS_IPHONE5 ? 568 : 480;
+    [self.left setFrame:CGRectMake(0, 0, 320, height)];
     self.right = [[UIImageView alloc] initWithImage:[array objectAtIndex:1]];
-    [self.right setFrame:CGRectMake(0, 0, 320, 480)];
+    [self.right setFrame:CGRectMake(0, 0, 320, height)];
     
     [self addSubview:self.left];
     [self addSubview:self.right];

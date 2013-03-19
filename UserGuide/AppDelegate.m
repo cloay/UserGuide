@@ -28,7 +28,8 @@
 //        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HaveLaunched"];
         [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
         GuideView *guideView = [[[UINib nibWithNibName:@"GuideView" bundle:nil] instantiateWithOwner:self options:nil] objectAtIndex:0];
-        [guideView setFrame:CGRectMake(0, 0, 320, 480)];
+        float height = DEVICE_IS_IPHONE5 ? 568 : 480;
+        [guideView setFrame:CGRectMake(0, 0, 320, height)];
         
         [guideView setBackgroundColor:[UIColor clearColor]];
         [self.window.rootViewController.view addSubview:guideView];
